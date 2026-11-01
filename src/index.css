@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-purple: #6D28D9;
+    --primary-violet: #9333EA;
+    --vibrant-orange: #FF7A00;
+    --text-primary: #17152B;
+    --text-secondary: #77758A;
+    --bg-secondary: #F8F7FC;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #17152B;
+    background-color: #F8F7FC;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom Catafy gradient button utilities */
+.btn-catafy-gradient {
+  background: linear-gradient(135deg, #6D28D9 0%, #9333EA 55%, #FF7A00 100%);
+  color: #FFFFFF;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-catafy-gradient:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 4px 14px rgba(109, 40, 217, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-catafy-gradient:active {
+  transform: translateY(0);
+}
+
+/* Custom scrollbar for catalogs & dashboards */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

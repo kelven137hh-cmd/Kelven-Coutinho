@@ -1,0 +1,6 @@
+{
+  "name": "Catafy — Plataforma SaaS de Catálogos Digitais",
+  "description": "Crie, personalize, faça a gestão e publique catálogos digitais profissionais com pedidos integrados diretamente ao WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

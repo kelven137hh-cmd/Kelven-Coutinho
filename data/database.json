@@ -1,0 +1,3197 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_01",
+      "name": "Administrador CatálogoHub",
+      "email": "admin@catalogohub.com",
+      "password_hash": "d9c1eb7a6554dab68bc49a0c2c3021a0:5e962195a65ee2ed1d735602ba5bc36adfe6b649ab60f630cc776cf6a96d37a9209bd84d2acc03f57348b915aee496c39f22bfef7e76895f8666490c208b1c8f",
+      "role": "admin",
+      "plan_id": "business",
+      "is_suspended": false,
+      "created_at": "2026-10-02T06:22:29.177Z"
+    },
+    {
+      "id": "usr_demo_01",
+      "name": "Lucas Martins",
+      "email": "demo@catalogohub.com",
+      "password_hash": "0a78f2223ae7c000c92b274bd1f03a35:425faad2c7ade57719d5da63a6fde7ad1ff283ef91cb77d6aa00df7418ab74a5f6af61c86a26d3f776d336fb275fca24282654f82d4b350c1e99fd473dfc2f7e",
+      "role": "user",
+      "plan_id": "pro",
+      "is_suspended": false,
+      "created_at": "2026-10-12T06:22:29.231Z"
+    },
+    {
+      "id": "usr_8ce4418a",
+      "name": "Kelven",
+      "email": "kelven137hh@gmail.com",
+      "password_hash": "b8a90d67eb06bc655d0bbf6ce3ccb93f:cdf0d5f9c1cdca009f14997d0789a107ee319e5b31b7703c4ba067cba7b3d98f38e55b224d3e2c9eb1dc7f409068efb70258337c3ab60a0d5b074c8212f02de2",
+      "role": "user",
+      "plan_id": "free",
+      "is_suspended": false,
+      "created_at": "2026-11-01T06:24:04.662Z"
+    },
+    {
+      "id": "usr_c37a9564",
+      "name": "Tester Catafy",
+      "email": "test.catafy@example.com",
+      "password_hash": "51ce538d770c7d51ed4e449d006edcff:2514f945094724cce7af49ac800a8c95c892ff36c9760e9e21705941d878c606f4d8fd02d51eadd41b9104e4069e4c6fb70ca262a297e992ace2f2ddcf2d5093",
+      "role": "user",
+      "plan_id": "free",
+      "is_suspended": false,
+      "created_at": "2026-11-01T06:54:22.730Z"
+    }
+  ],
+  "businesses": [
+    {
+      "id": "biz_pizza_01",
+      "user_id": "usr_demo_01",
+      "name": "Forno & Brasa — Pizzaria Artesanal",
+      "category": "pizzeria",
+      "description": "Pizzas fermentadas naturalmente por 48 horas em forno a lenha, queijos artesanais e ingredientes italianos selecionados.",
+      "logo_url": "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=200&auto=format&fit=crop&q=80",
+      "cover_url": "/src/assets/images/food_artisan_pizza_1793488874759.jpg",
+      "phone": "+351 912 345 678",
+      "whatsapp": "+351912345678",
+      "address": "Rua das Flores 142, Lisboa",
+      "instagram": "@fornoebrasa.pizzaria",
+      "facebook": "fornoebrasa",
+      "created_at": "2026-10-14T06:22:29.231Z"
+    },
+    {
+      "id": "biz_fashion_02",
+      "user_id": "usr_demo_01",
+      "name": "Aura Concept Store",
+      "category": "fashion",
+      "description": "Moda minimalista, peças atemporais em linho puro e acessórios artesanais para o dia a dia contemporâneo.",
+      "logo_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=200&auto=format&fit=crop&q=80",
+      "cover_url": "/src/assets/images/fashion_boutique_items_1793488875071.jpg",
+      "phone": "+351 925 889 112",
+      "whatsapp": "+351925889112",
+      "address": "Avenida da Liberdade 89, Lisboa",
+      "instagram": "@aura.conceptstore",
+      "created_at": "2026-10-17T06:22:29.231Z"
+    },
+    {
+      "id": "biz_barber_03",
+      "user_id": "usr_demo_01",
+      "name": "Gentleman's Grooming Barber",
+      "category": "barbershop",
+      "description": "Cortes clássicos, barba na navalha com toalha quente e atendimento personalizado em ambiente exclusivo.",
+      "logo_url": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=200&auto=format&fit=crop&q=80",
+      "cover_url": "/src/assets/images/barber_grooming_station_1793488875178.jpg",
+      "phone": "+351 933 445 566",
+      "whatsapp": "+351933445566",
+      "address": "Praça do Comércio 24, Porto",
+      "instagram": "@gentlemans.barber",
+      "created_at": "2026-10-22T06:22:29.231Z"
+    }
+  ],
+  "catalogs": [
+    {
+      "id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "user_id": "usr_demo_01",
+      "title": "Menu Forno & Brasa",
+      "slug": "pizzaria-forno-e-brasa",
+      "description": "Escolha suas pizzas favoritas e faça seu pedido direto pelo WhatsApp!",
+      "template": "modern",
+      "primary_color": "#dc2626",
+      "secondary_color": "#991b1b",
+      "font_family": "Plus Jakarta Sans",
+      "cover_url": "/src/assets/images/food_artisan_pizza_1793488874759.jpg",
+      "logo_url": "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=200&auto=format&fit=crop&q=80",
+      "welcome_message": "Seja bem-vindo ao Forno & Brasa! Selecione os itens que deseja e envie seu pedido diretamente pelo WhatsApp.",
+      "currency": "€",
+      "allow_orders": true,
+      "is_active": true,
+      "created_at": "2026-10-14T06:22:29.232Z",
+      "updated_at": "2026-11-01T06:22:29.232Z"
+    },
+    {
+      "id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "user_id": "usr_demo_01",
+      "title": "Coleção Essenciais de Linho",
+      "slug": "aura-concept",
+      "description": "Peças exclusivas e sustentáveis. Fale conosco para reservar suas peças.",
+      "template": "premium",
+      "primary_color": "#475569",
+      "secondary_color": "#1e293b",
+      "font_family": "Playfair Display",
+      "cover_url": "/src/assets/images/fashion_boutique_items_1793488875071.jpg",
+      "logo_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=200&auto=format&fit=crop&q=80",
+      "welcome_message": "Explore nossa seleção especial. Ao clicar em reservar, nossa equipe atenderá você com exclusividade.",
+      "currency": "€",
+      "allow_orders": true,
+      "is_active": true,
+      "created_at": "2026-10-17T06:22:29.232Z",
+      "updated_at": "2026-11-01T06:22:29.232Z"
+    },
+    {
+      "id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "user_id": "usr_demo_01",
+      "title": "Menu de Serviços & Agendamento",
+      "slug": "gentleman-barber",
+      "description": "Tabela de serviços e agendamento instantâneo via WhatsApp.",
+      "template": "classic",
+      "primary_color": "#0f172a",
+      "secondary_color": "#334155",
+      "font_family": "Plus Jakarta Sans",
+      "cover_url": "/src/assets/images/barber_grooming_station_1793488875178.jpg",
+      "logo_url": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=200&auto=format&fit=crop&q=80",
+      "welcome_message": "Confira nossos serviços premium e agende seu horário com um de nossos mestres barbeiros.",
+      "currency": "€",
+      "allow_orders": true,
+      "is_active": true,
+      "created_at": "2026-10-22T06:22:29.232Z",
+      "updated_at": "2026-11-01T06:22:29.232Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_spec_01",
+      "business_id": "biz_pizza_01",
+      "name": "Pizzas Especiais",
+      "sort_order": 1
+    },
+    {
+      "id": "cat_trad_02",
+      "business_id": "biz_pizza_01",
+      "name": "Pizzas Tradicionais",
+      "sort_order": 2
+    },
+    {
+      "id": "cat_beb_03",
+      "business_id": "biz_pizza_01",
+      "name": "Bebidas & Sobremesas",
+      "sort_order": 3
+    },
+    {
+      "id": "cat_fsh_top",
+      "business_id": "biz_fashion_02",
+      "name": "Vestuário & Camisas",
+      "sort_order": 1
+    },
+    {
+      "id": "cat_fsh_acs",
+      "business_id": "biz_fashion_02",
+      "name": "Acessórios & Couro",
+      "sort_order": 2
+    },
+    {
+      "id": "cat_brb_crt",
+      "business_id": "biz_barber_03",
+      "name": "Cortes & Barba",
+      "sort_order": 1
+    },
+    {
+      "id": "cat_brb_trt",
+      "business_id": "biz_barber_03",
+      "name": "Tratamentos & Cuidados",
+      "sort_order": 2
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_pz_01",
+      "business_id": "biz_pizza_01",
+      "category_id": "cat_spec_01",
+      "name": "Margherita Verace D.O.P.",
+      "description": "Molho San Marzano D.O.P., mozzarella di bufala campana fresca, manjericão orgânico e fio de azeite extra virgem.",
+      "price": 14.5,
+      "promo_price": null,
+      "image_url": "/src/assets/images/food_artisan_pizza_1793488874759.jpg",
+      "is_available": true,
+      "sort_order": 1,
+      "segment_data": {
+        "ingredients": "Molho San Marzano, Mozzarella di Bufala, Manjericão, Azeite E.V.",
+        "sizes": [
+          {
+            "name": "Individual (28cm)",
+            "price": 14.5
+          },
+          {
+            "name": "Família (35cm)",
+            "price": 21
+          }
+        ]
+      },
+      "created_at": "2026-10-15T06:22:29.232Z"
+    },
+    {
+      "id": "prod_pz_02",
+      "business_id": "biz_pizza_01",
+      "category_id": "cat_spec_01",
+      "name": "Tartufo & Prosciutto Crudo",
+      "description": "Creme de trufas negras de Norcia, mozzarella fior di latte, presunto cru di Parma 24 meses e rúcula fresca selvagem.",
+      "price": 19.9,
+      "promo_price": 17.9,
+      "image_url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&auto=format&fit=crop&q=80",
+      "is_available": true,
+      "sort_order": 2,
+      "segment_data": {
+        "ingredients": "Creme de trufa negra, Fior di latte, Prosciutto di Parma, Rúcula selvagem",
+        "sizes": [
+          {
+            "name": "Individual (28cm)",
+            "price": 17.9
+          },
+          {
+            "name": "Família (35cm)",
+            "price": 26.5
+          }
+        ]
+      },
+      "created_at": "2026-10-15T06:22:29.232Z"
+    },
+    {
+      "id": "prod_pz_03",
+      "business_id": "biz_pizza_01",
+      "category_id": "cat_trad_02",
+      "name": "Diavola com Nduja Calabresa",
+      "description": "Molho de tomate italiano, mozzarella, salame picante artesanal, nduja da Calábria e orégãos frescos.",
+      "price": 15.5,
+      "promo_price": null,
+      "image_url": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=600&auto=format&fit=crop&q=80",
+      "is_available": true,
+      "sort_order": 3,
+      "segment_data": {
+        "ingredients": "Molho artesanal, Fior di latte, Salame picante, Nduja calabresa",
+        "sizes": [
+          {
+            "name": "Individual (28cm)",
+            "price": 15.5
+          },
+          {
+            "name": "Família (35cm)",
+            "price": 22.5
+          }
+        ]
+      },
+      "created_at": "2026-10-15T06:22:29.232Z"
+    },
+    {
+      "id": "prod_pz_04",
+      "business_id": "biz_pizza_01",
+      "category_id": "cat_beb_03",
+      "name": "Tiramisù Tradizionale al Mascarpone",
+      "description": "Receita clássica italiana com biscoitos savoiardi embebidos em café espresso, creme de mascarpone e cacau amargo.",
+      "price": 6.5,
+      "promo_price": null,
+      "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600&auto=format&fit=crop&q=80",
+      "is_available": true,
+      "sort_order": 4,
+      "segment_data": {
+        "ingredients": "Mascarpone artesanal, Café espresso, Cacau Valrhona 70%, Biscoito Savoiardi"
+      },
+      "created_at": "2026-10-15T06:22:29.232Z"
+    },
+    {
+      "id": "prod_fsh_01",
+      "business_id": "biz_fashion_02",
+      "category_id": "cat_fsh_top",
+      "name": "Camisa Oversized em Linho Puro",
+      "description": "Feita com linho 100% europeu pré-lavado, caimento relaxado e botões em madrepérola natural.",
+      "price": 89,
+      "promo_price": null,
+      "image_url": "/src/assets/images/fashion_boutique_items_1793488875071.jpg",
+      "is_available": true,
+      "sort_order": 1,
+      "segment_data": {
+        "clothing_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "colors": [
+          "Areia Natural",
+          "Branco Puro",
+          "Verde Oliva"
+        ],
+        "sku": "AUR-LIN-01"
+      },
+      "created_at": "2026-10-18T06:22:29.232Z"
+    },
+    {
+      "id": "prod_fsh_02",
+      "business_id": "biz_fashion_02",
+      "category_id": "cat_fsh_acs",
+      "name": "Relógio Minimalista com Bracelete em Pele",
+      "description": "Caixa em aço inoxidável escovado 38mm, mostrador branco clean e bracelete artesanal em pele italiana caramelo.",
+      "price": 145,
+      "promo_price": 129,
+      "image_url": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&auto=format&fit=crop&q=80",
+      "is_available": true,
+      "sort_order": 2,
+      "segment_data": {
+        "colors": [
+          "Caramelo & Prata",
+          "Preto & Grafite"
+        ],
+        "sku": "AUR-WAT-09"
+      },
+      "created_at": "2026-10-18T06:22:29.232Z"
+    },
+    {
+      "id": "prod_brb_01",
+      "business_id": "biz_barber_03",
+      "category_id": "cat_brb_crt",
+      "name": "Corte Tradicional + Lavagem",
+      "description": "Avaliação visagista, corte com tesoura e máquina, lavagem refrescante com massagem capilar e finalização com pomada.",
+      "price": 22,
+      "promo_price": null,
+      "image_url": "/src/assets/images/barber_grooming_station_1793488875178.jpg",
+      "is_available": true,
+      "sort_order": 1,
+      "segment_data": {
+        "service_duration": "45 minutos"
+      },
+      "created_at": "2026-10-23T06:22:29.232Z"
+    },
+    {
+      "id": "prod_brb_02",
+      "business_id": "biz_barber_03",
+      "category_id": "cat_brb_crt",
+      "name": "Barba Terapia com Toalha Quente",
+      "description": "Design de barba com navalha clássica, óleos essenciais, 2 toalhas quentes aromáticas e bálsamo hidratante.",
+      "price": 18,
+      "promo_price": null,
+      "image_url": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&auto=format&fit=crop&q=80",
+      "is_available": true,
+      "sort_order": 2,
+      "segment_data": {
+        "service_duration": "35 minutos"
+      },
+      "created_at": "2026-10-23T06:22:29.232Z"
+    }
+  ],
+  "catalog_views": [
+    {
+      "id": "vw_14_0_ra6qqr",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T19:03:20.080Z"
+    },
+    {
+      "id": "vw_14_1_fr3jt9",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-18T14:46:11.638Z"
+    },
+    {
+      "id": "vw_14_2_29vewp",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T16:43:47.913Z"
+    },
+    {
+      "id": "vw_14_3_imrw5h",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-18T11:36:11.208Z"
+    },
+    {
+      "id": "vw_14_4_ucn7oh",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T16:51:39.531Z"
+    },
+    {
+      "id": "vw_14_5_nh3q1h",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-18T13:17:02.520Z"
+    },
+    {
+      "id": "vw_14_6_8ws88",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T08:27:29.465Z"
+    },
+    {
+      "id": "vw_14_7_wc3h1g",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-18T15:51:37.465Z"
+    },
+    {
+      "id": "vw_14_8_2ysgq",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T07:30:02.570Z"
+    },
+    {
+      "id": "vw_14_9_uondcxa",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-18T23:04:20.430Z"
+    },
+    {
+      "id": "vw_14_10_iup6y",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T10:58:27.906Z"
+    },
+    {
+      "id": "vw_14_11_m0e1cl",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-18T15:38:16.996Z"
+    },
+    {
+      "id": "vw_14_12_0gx2i5",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T21:09:13.150Z"
+    },
+    {
+      "id": "vw_14_13_iipll",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-18T09:17:28.130Z"
+    },
+    {
+      "id": "vw_14_14_bpmus",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T18:08:59.344Z"
+    },
+    {
+      "id": "vw_14_15_vg2dn",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-19T01:23:23.630Z"
+    },
+    {
+      "id": "vw_14_16_k4kssr",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T19:50:43.666Z"
+    },
+    {
+      "id": "vw_14_17_jj6idl",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-18T16:03:48.936Z"
+    },
+    {
+      "id": "vw_14_18_bljje",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T19:08:01.304Z"
+    },
+    {
+      "id": "vw_14_19_vd8ow",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-19T02:28:09.612Z"
+    },
+    {
+      "id": "vw_14_20_6mycw4",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T23:33:46.671Z"
+    },
+    {
+      "id": "vw_14_21_gjjjl9",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-18T16:46:24.299Z"
+    },
+    {
+      "id": "vw_14_22_5d2rkq",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T18:40:53.803Z"
+    },
+    {
+      "id": "vw_14_23_br3t5t",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-18T19:48:47.116Z"
+    },
+    {
+      "id": "vw_14_24_m3dq8",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T08:12:56.150Z"
+    },
+    {
+      "id": "vw_14_25_ci3ru",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-19T03:00:53.235Z"
+    },
+    {
+      "id": "vw_14_26_8jjx0p",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-19T00:33:10.935Z"
+    },
+    {
+      "id": "vw_14_27_fmoglq",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-18T10:52:48.443Z"
+    },
+    {
+      "id": "vw_14_28_8a1rhl",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-18T13:42:08.210Z"
+    },
+    {
+      "id": "vw_14_29_k77tds",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-18T11:15:13.480Z"
+    },
+    {
+      "id": "vw_14_30_bjbyuh",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-19T02:19:32.056Z"
+    },
+    {
+      "id": "vw_14_31_am80u",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-19T03:45:14.184Z"
+    },
+    {
+      "id": "vw_13_0_8u11tz",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-19T15:37:26.328Z"
+    },
+    {
+      "id": "vw_13_1_bo7tsk",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-19T12:48:57.201Z"
+    },
+    {
+      "id": "vw_13_2_gjecy6",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T03:15:02.271Z"
+    },
+    {
+      "id": "vw_13_3_t16cse",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-19T22:33:21.633Z"
+    },
+    {
+      "id": "vw_13_4_ifexdr",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-19T08:31:27.803Z"
+    },
+    {
+      "id": "vw_13_5_04hwwe",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-19T13:49:07.723Z"
+    },
+    {
+      "id": "vw_13_6_8yabi",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-19T10:01:18.198Z"
+    },
+    {
+      "id": "vw_13_7_9129mo",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-19T23:09:46.369Z"
+    },
+    {
+      "id": "vw_13_8_4ds0h",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-19T17:16:11.333Z"
+    },
+    {
+      "id": "vw_13_9_gl5yoa",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-19T19:17:53.445Z"
+    },
+    {
+      "id": "vw_13_10_8ppp9i",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-19T15:13:02.120Z"
+    },
+    {
+      "id": "vw_13_11_0tovrl",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-19T18:14:19.591Z"
+    },
+    {
+      "id": "vw_13_12_6jfywm",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-19T12:30:15.634Z"
+    },
+    {
+      "id": "vw_13_13_xq4dva",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-20T00:42:18.128Z"
+    },
+    {
+      "id": "vw_13_14_1jry3m",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-19T10:52:42.905Z"
+    },
+    {
+      "id": "vw_13_15_gmulaa",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-19T23:54:52.717Z"
+    },
+    {
+      "id": "vw_13_16_noeo5d",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T01:57:59.682Z"
+    },
+    {
+      "id": "vw_13_17_zck1p5",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-19T15:40:13.149Z"
+    },
+    {
+      "id": "vw_12_0_oij37c",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-21T00:09:48.475Z"
+    },
+    {
+      "id": "vw_12_1_w2sns",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-21T00:45:18.649Z"
+    },
+    {
+      "id": "vw_12_2_uwav9d",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T22:42:43.310Z"
+    },
+    {
+      "id": "vw_12_3_iieqg",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-20T09:29:30.539Z"
+    },
+    {
+      "id": "vw_12_4_1sfub",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T21:31:45.485Z"
+    },
+    {
+      "id": "vw_12_5_vwsrkut",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-20T21:15:41.804Z"
+    },
+    {
+      "id": "vw_12_6_89suj8",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T22:30:37.406Z"
+    },
+    {
+      "id": "vw_12_7_1uqcso",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-20T21:59:23.528Z"
+    },
+    {
+      "id": "vw_12_8_n08vqw",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T09:49:37.207Z"
+    },
+    {
+      "id": "vw_12_9_1v6k6h",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-20T23:15:03.446Z"
+    },
+    {
+      "id": "vw_12_10_dsttos",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T15:54:51.924Z"
+    },
+    {
+      "id": "vw_12_11_8j3qxa",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-20T16:03:13.450Z"
+    },
+    {
+      "id": "vw_12_12_trv9sg",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T18:03:29.958Z"
+    },
+    {
+      "id": "vw_12_13_28fmbn",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-20T18:26:30.483Z"
+    },
+    {
+      "id": "vw_12_14_m4qw8",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T22:48:30.682Z"
+    },
+    {
+      "id": "vw_12_15_5vr4wn",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-20T23:04:40.204Z"
+    },
+    {
+      "id": "vw_12_16_cjdsls",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-21T03:13:31.379Z"
+    },
+    {
+      "id": "vw_12_17_y4yob",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-20T16:24:50.561Z"
+    },
+    {
+      "id": "vw_12_18_3586dg",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T06:57:23.352Z"
+    },
+    {
+      "id": "vw_12_19_t9li2l",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-20T18:43:15.980Z"
+    },
+    {
+      "id": "vw_12_20_jyrfjs",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T15:32:34.742Z"
+    },
+    {
+      "id": "vw_12_21_od887",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-21T04:26:30.461Z"
+    },
+    {
+      "id": "vw_12_22_gdxvur",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T15:46:21.386Z"
+    },
+    {
+      "id": "vw_12_23_yuthnl",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-21T00:35:43.803Z"
+    },
+    {
+      "id": "vw_12_24_bq43zc",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T08:52:47.664Z"
+    },
+    {
+      "id": "vw_12_25_s19e7f",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-20T22:39:10.674Z"
+    },
+    {
+      "id": "vw_12_26_twzf3n",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T18:14:42.460Z"
+    },
+    {
+      "id": "vw_12_27_jztf2j",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-21T00:41:09.229Z"
+    },
+    {
+      "id": "vw_12_28_fetgh",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-21T00:34:41.253Z"
+    },
+    {
+      "id": "vw_12_29_nlz3tv",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-20T21:56:11.956Z"
+    },
+    {
+      "id": "vw_12_30_eqltp9",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-20T19:58:47.973Z"
+    },
+    {
+      "id": "vw_11_0_r5stw9",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-21T13:40:38.614Z"
+    },
+    {
+      "id": "vw_11_1_qg51v8",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-21T15:03:19.554Z"
+    },
+    {
+      "id": "vw_11_2_iak5uh",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-21T16:29:21.494Z"
+    },
+    {
+      "id": "vw_11_3_dhbti",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-21T14:32:45.768Z"
+    },
+    {
+      "id": "vw_11_4_029cbh",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-22T02:48:25.567Z"
+    },
+    {
+      "id": "vw_11_5_qlweai",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-21T16:35:51.029Z"
+    },
+    {
+      "id": "vw_11_6_9i6xic",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-21T20:18:47.498Z"
+    },
+    {
+      "id": "vw_11_7_fpsazkp",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-21T18:24:05.329Z"
+    },
+    {
+      "id": "vw_11_8_x5p78s",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-22T01:06:09.005Z"
+    },
+    {
+      "id": "vw_11_9_0x4n7",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-22T00:25:10.105Z"
+    },
+    {
+      "id": "vw_11_10_arwgf",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-21T09:17:41.032Z"
+    },
+    {
+      "id": "vw_11_11_psdtmp",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-21T07:14:56.182Z"
+    },
+    {
+      "id": "vw_11_12_493qmb",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-21T14:53:01.066Z"
+    },
+    {
+      "id": "vw_10_0_q96jg",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-22T08:44:56.430Z"
+    },
+    {
+      "id": "vw_10_1_190j6",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-23T03:39:31.688Z"
+    },
+    {
+      "id": "vw_10_2_n9maq9",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-22T22:10:10.043Z"
+    },
+    {
+      "id": "vw_10_3_ir52po",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-22T14:44:05.627Z"
+    },
+    {
+      "id": "vw_10_4_575spj",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-22T19:35:49.114Z"
+    },
+    {
+      "id": "vw_10_5_0ty2c",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-22T09:59:00.636Z"
+    },
+    {
+      "id": "vw_10_6_fowxdu",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-22T13:40:14.600Z"
+    },
+    {
+      "id": "vw_10_7_n2grmc",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-22T17:34:42.104Z"
+    },
+    {
+      "id": "vw_10_8_8pz2m",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-22T16:13:50.926Z"
+    },
+    {
+      "id": "vw_10_9_yfx7cm",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-23T02:20:00.962Z"
+    },
+    {
+      "id": "vw_10_10_1d4h04",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-22T08:56:50.947Z"
+    },
+    {
+      "id": "vw_10_11_wwbkvq",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-22T08:40:57.310Z"
+    },
+    {
+      "id": "vw_10_12_9ep3em",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-22T22:10:28.269Z"
+    },
+    {
+      "id": "vw_10_13_bss97",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-23T03:17:19.432Z"
+    },
+    {
+      "id": "vw_10_14_pdc3yn",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T04:07:25.217Z"
+    },
+    {
+      "id": "vw_10_15_80e1h",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-22T15:29:22.196Z"
+    },
+    {
+      "id": "vw_10_16_79fix6",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-22T18:17:39.304Z"
+    },
+    {
+      "id": "vw_10_17_sogpp",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-22T19:07:13.689Z"
+    },
+    {
+      "id": "vw_10_18_1bkdk",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-22T21:39:42.544Z"
+    },
+    {
+      "id": "vw_10_19_o2z40q",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-22T21:02:13.542Z"
+    },
+    {
+      "id": "vw_10_20_yyo4m",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-22T14:20:16.525Z"
+    },
+    {
+      "id": "vw_10_21_xcox8",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-22T06:53:08.310Z"
+    },
+    {
+      "id": "vw_10_22_pug53w",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T01:05:43.066Z"
+    },
+    {
+      "id": "vw_9_0_29tla",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T06:40:34.749Z"
+    },
+    {
+      "id": "vw_9_1_u6378",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-23T09:37:33.260Z"
+    },
+    {
+      "id": "vw_9_2_a23s8i",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T09:19:44.816Z"
+    },
+    {
+      "id": "vw_9_3_z29fp",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-23T19:14:44.442Z"
+    },
+    {
+      "id": "vw_9_4_m21k03",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T13:14:52.000Z"
+    },
+    {
+      "id": "vw_9_5_fvbg9d",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-23T07:56:46.270Z"
+    },
+    {
+      "id": "vw_9_6_r0cz5",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T18:54:32.107Z"
+    },
+    {
+      "id": "vw_9_7_r8tlw",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-23T19:32:18.484Z"
+    },
+    {
+      "id": "vw_9_8_gt3wha",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T07:59:33.988Z"
+    },
+    {
+      "id": "vw_9_9_pah",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-23T15:20:43.332Z"
+    },
+    {
+      "id": "vw_9_10_9asc4t",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T20:39:47.572Z"
+    },
+    {
+      "id": "vw_9_11_wyswic",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-23T07:41:49.004Z"
+    },
+    {
+      "id": "vw_9_12_7bgs97",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-24T00:50:23.741Z"
+    },
+    {
+      "id": "vw_9_13_9e3bac",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-23T18:26:35.008Z"
+    },
+    {
+      "id": "vw_9_14_oduylm",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T22:56:14.803Z"
+    },
+    {
+      "id": "vw_9_15_mibygd",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-24T00:38:02.583Z"
+    },
+    {
+      "id": "vw_9_16_mpcg1o",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T15:55:33.348Z"
+    },
+    {
+      "id": "vw_9_17_uxyugn",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-23T16:48:09.492Z"
+    },
+    {
+      "id": "vw_9_18_ulbve",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T19:51:18.445Z"
+    },
+    {
+      "id": "vw_9_19_ypg63",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-23T22:02:02.467Z"
+    },
+    {
+      "id": "vw_9_20_9t22ru",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T07:53:02.221Z"
+    },
+    {
+      "id": "vw_9_21_8zhja8",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-23T06:53:31.987Z"
+    },
+    {
+      "id": "vw_9_22_vfst78",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T13:43:07.616Z"
+    },
+    {
+      "id": "vw_9_23_755um",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-23T14:56:37.535Z"
+    },
+    {
+      "id": "vw_9_24_ipth5",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-23T06:40:00.727Z"
+    },
+    {
+      "id": "vw_8_0_06zqsw",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-24T11:15:18.336Z"
+    },
+    {
+      "id": "vw_8_1_62n7m",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-24T11:10:15.131Z"
+    },
+    {
+      "id": "vw_8_2_3eet98",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-24T10:48:29.231Z"
+    },
+    {
+      "id": "vw_8_3_2r6nqy",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-24T13:31:42.407Z"
+    },
+    {
+      "id": "vw_8_4_5c4cqq",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-25T03:53:42.655Z"
+    },
+    {
+      "id": "vw_8_5_fgsie",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-25T04:23:11.831Z"
+    },
+    {
+      "id": "vw_8_6_n1dt9g",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-24T08:17:35.594Z"
+    },
+    {
+      "id": "vw_8_7_s2wm96",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-25T02:25:00.097Z"
+    },
+    {
+      "id": "vw_8_8_mnx799",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-24T14:32:42.620Z"
+    },
+    {
+      "id": "vw_8_9_0m4k8i",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-25T00:16:10.501Z"
+    },
+    {
+      "id": "vw_8_10_vuljr",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-24T23:30:18.435Z"
+    },
+    {
+      "id": "vw_8_11_5qgo7",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-24T14:16:00.954Z"
+    },
+    {
+      "id": "vw_8_12_zap9vm",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-24T08:13:31.214Z"
+    },
+    {
+      "id": "vw_8_13_3en80y",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-24T20:23:40.536Z"
+    },
+    {
+      "id": "vw_8_14_6nfe2h",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-24T23:51:29.411Z"
+    },
+    {
+      "id": "vw_8_15_4mpsh",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-24T12:23:32.583Z"
+    },
+    {
+      "id": "vw_8_16_axiib",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-24T10:20:21.344Z"
+    },
+    {
+      "id": "vw_8_17_kylit",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-24T06:23:17.128Z"
+    },
+    {
+      "id": "vw_8_18_fvg5yi",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-24T15:04:47.651Z"
+    },
+    {
+      "id": "vw_8_19_dkjooh",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-25T02:02:31.490Z"
+    },
+    {
+      "id": "vw_8_20_58hxqd",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-25T03:06:40.411Z"
+    },
+    {
+      "id": "vw_8_21_a4uemo",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-24T09:25:37.189Z"
+    },
+    {
+      "id": "vw_8_22_nx7mmd",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-24T20:11:53.673Z"
+    },
+    {
+      "id": "vw_8_23_0e0rtb",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-24T19:55:38.277Z"
+    },
+    {
+      "id": "vw_8_24_mkdw9e",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-24T20:58:09.154Z"
+    },
+    {
+      "id": "vw_7_0_jzpmsr",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-25T20:52:11.419Z"
+    },
+    {
+      "id": "vw_7_1_wt3e72",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-25T07:34:37.207Z"
+    },
+    {
+      "id": "vw_7_2_u7tevt",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-25T08:00:18.981Z"
+    },
+    {
+      "id": "vw_7_3_tzawh",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-25T11:25:51.282Z"
+    },
+    {
+      "id": "vw_7_4_y7lrqs",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-25T18:48:55.506Z"
+    },
+    {
+      "id": "vw_7_5_dshfj",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-26T02:59:04.241Z"
+    },
+    {
+      "id": "vw_7_6_3qia3s",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-25T22:18:38.650Z"
+    },
+    {
+      "id": "vw_7_7_r373u",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-25T18:17:37.812Z"
+    },
+    {
+      "id": "vw_7_8_0u2qaa",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T00:10:53.339Z"
+    },
+    {
+      "id": "vw_7_9_ud5s8t",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-25T06:43:38.144Z"
+    },
+    {
+      "id": "vw_7_10_7uqi7y",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T02:32:51.016Z"
+    },
+    {
+      "id": "vw_7_11_hh47hk",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-25T19:57:55.959Z"
+    },
+    {
+      "id": "vw_7_12_4rfv3h",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-25T21:17:54.545Z"
+    },
+    {
+      "id": "vw_7_13_0azmxd",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-25T22:30:29.217Z"
+    },
+    {
+      "id": "vw_7_14_0s7183",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-25T08:07:40.642Z"
+    },
+    {
+      "id": "vw_6_0_vc6ss7",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T19:41:27.703Z"
+    },
+    {
+      "id": "vw_6_1_m2hy5p",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-26T20:26:14.178Z"
+    },
+    {
+      "id": "vw_6_2_oghc4e",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T23:51:08.404Z"
+    },
+    {
+      "id": "vw_6_3_157fq",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-26T18:59:49.801Z"
+    },
+    {
+      "id": "vw_6_4_w012z",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T10:46:18.722Z"
+    },
+    {
+      "id": "vw_6_5_e799j",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-27T03:30:21.078Z"
+    },
+    {
+      "id": "vw_6_6_f19p58",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-27T00:43:32.503Z"
+    },
+    {
+      "id": "vw_6_7_oekppi",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-26T17:06:25.411Z"
+    },
+    {
+      "id": "vw_6_8_444no9",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T23:10:49.080Z"
+    },
+    {
+      "id": "vw_6_9_vrnbui",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-26T06:57:51.669Z"
+    },
+    {
+      "id": "vw_6_10_gynzr",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T14:17:37.516Z"
+    },
+    {
+      "id": "vw_6_11_ecxyhm",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-26T07:57:33.907Z"
+    },
+    {
+      "id": "vw_6_12_lv3vlfj",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T13:23:42.331Z"
+    },
+    {
+      "id": "vw_6_13_tf9kf6",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-26T17:30:13.804Z"
+    },
+    {
+      "id": "vw_6_14_evfsd",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T21:31:29.482Z"
+    },
+    {
+      "id": "vw_6_15_map83",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-26T07:40:56.183Z"
+    },
+    {
+      "id": "vw_6_16_fjiqy",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-27T02:38:51.878Z"
+    },
+    {
+      "id": "vw_6_17_vg4gps",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-26T11:10:13.135Z"
+    },
+    {
+      "id": "vw_6_18_okeh46",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T18:13:58.369Z"
+    },
+    {
+      "id": "vw_6_19_li6mil",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-26T21:28:59.750Z"
+    },
+    {
+      "id": "vw_6_20_amj0b",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T15:19:44.760Z"
+    },
+    {
+      "id": "vw_6_21_08goc9",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-27T01:44:04.239Z"
+    },
+    {
+      "id": "vw_6_22_un0wzi",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T20:22:34.154Z"
+    },
+    {
+      "id": "vw_6_23_zwdjbe",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-27T02:22:12.284Z"
+    },
+    {
+      "id": "vw_6_24_xfo3ex",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T11:55:35.419Z"
+    },
+    {
+      "id": "vw_6_25_1bdc",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-27T00:00:58.323Z"
+    },
+    {
+      "id": "vw_6_26_p6jani",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T19:49:51.000Z"
+    },
+    {
+      "id": "vw_6_27_ygvff",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-27T04:09:21.158Z"
+    },
+    {
+      "id": "vw_6_28_gggyjr",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-26T19:45:52.084Z"
+    },
+    {
+      "id": "vw_5_0_pjx6kv",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-28T01:48:47.470Z"
+    },
+    {
+      "id": "vw_5_1_wjcfmh",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-28T01:39:18.166Z"
+    },
+    {
+      "id": "vw_5_2_uk6lw",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-28T02:10:52.158Z"
+    },
+    {
+      "id": "vw_5_3_3v5q5d",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-27T11:19:09.728Z"
+    },
+    {
+      "id": "vw_5_4_i6l6ln",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-27T23:01:00.951Z"
+    },
+    {
+      "id": "vw_5_5_x6frat",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-27T09:38:38.790Z"
+    },
+    {
+      "id": "vw_5_6_dm8vj4",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-27T13:35:04.898Z"
+    },
+    {
+      "id": "vw_5_7_ckyro9",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-27T14:11:57.560Z"
+    },
+    {
+      "id": "vw_5_8_0pwjnx",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-27T21:24:47.842Z"
+    },
+    {
+      "id": "vw_5_9_irvwif",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-27T19:01:32.621Z"
+    },
+    {
+      "id": "vw_5_10_r2cg1m",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-28T02:35:15.217Z"
+    },
+    {
+      "id": "vw_5_11_gt0lrt",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-27T08:31:49.453Z"
+    },
+    {
+      "id": "vw_5_12_dt8sgb",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-27T21:45:04.349Z"
+    },
+    {
+      "id": "vw_5_13_go9q2h",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-27T08:13:42.382Z"
+    },
+    {
+      "id": "vw_5_14_xtb8dt",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-27T18:17:09.728Z"
+    },
+    {
+      "id": "vw_5_15_kxxpw7",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-27T18:36:46.620Z"
+    },
+    {
+      "id": "vw_5_16_xqr7e3",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-27T21:19:17.289Z"
+    },
+    {
+      "id": "vw_5_17_npov33",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-27T22:00:32.632Z"
+    },
+    {
+      "id": "vw_5_18_bocq8d",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-27T22:04:45.407Z"
+    },
+    {
+      "id": "vw_5_19_wn7o1d",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-27T17:28:19.007Z"
+    },
+    {
+      "id": "vw_5_20_7f0cta",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-27T17:20:01.218Z"
+    },
+    {
+      "id": "vw_5_21_j8p75",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-27T08:59:03.878Z"
+    },
+    {
+      "id": "vw_4_0_4o2ujd",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-28T23:37:52.654Z"
+    },
+    {
+      "id": "vw_4_1_ghtsyp",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-28T06:36:56.538Z"
+    },
+    {
+      "id": "vw_4_2_qcdgnh",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-28T22:42:50.154Z"
+    },
+    {
+      "id": "vw_4_3_gwphrp",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-28T13:37:03.567Z"
+    },
+    {
+      "id": "vw_4_4_clh9b",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-28T19:30:49.918Z"
+    },
+    {
+      "id": "vw_4_5_ld1r4",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-28T09:33:15.211Z"
+    },
+    {
+      "id": "vw_4_6_n4ecw9",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-28T06:56:28.588Z"
+    },
+    {
+      "id": "vw_4_7_ptz71t",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-28T12:42:31.844Z"
+    },
+    {
+      "id": "vw_4_8_4uyew",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-28T15:38:21.041Z"
+    },
+    {
+      "id": "vw_4_9_rdb4sm",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-29T01:48:34.692Z"
+    },
+    {
+      "id": "vw_4_10_6kdvwg",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-29T03:54:08.878Z"
+    },
+    {
+      "id": "vw_4_11_lz257",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-28T13:27:38.949Z"
+    },
+    {
+      "id": "vw_4_12_8amn6p",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-29T02:56:15.421Z"
+    },
+    {
+      "id": "vw_4_13_0606rg",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-28T17:43:16.985Z"
+    },
+    {
+      "id": "vw_4_14_ingrm",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-29T01:36:13.858Z"
+    },
+    {
+      "id": "vw_4_15_qlhesg",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-28T19:30:28.248Z"
+    },
+    {
+      "id": "vw_4_16_ijg62",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-29T02:56:17.291Z"
+    },
+    {
+      "id": "vw_4_17_feph2j",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-28T14:07:51.768Z"
+    },
+    {
+      "id": "vw_4_18_p2g1",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-29T04:03:54.546Z"
+    },
+    {
+      "id": "vw_4_19_osg4va",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-28T06:32:09.102Z"
+    },
+    {
+      "id": "vw_4_20_o1hmi9",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-28T10:32:42.191Z"
+    },
+    {
+      "id": "vw_4_21_hoxph",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-28T17:29:26.651Z"
+    },
+    {
+      "id": "vw_4_22_84nlc",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-28T17:32:32.512Z"
+    },
+    {
+      "id": "vw_4_23_bv8ih",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-28T08:38:55.289Z"
+    },
+    {
+      "id": "vw_4_24_ahib7i",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-28T15:51:14.010Z"
+    },
+    {
+      "id": "vw_3_0_awcrij",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-29T07:25:06.480Z"
+    },
+    {
+      "id": "vw_3_1_7d85qi",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-29T13:10:09.300Z"
+    },
+    {
+      "id": "vw_3_2_9nwqv",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-30T04:19:53.192Z"
+    },
+    {
+      "id": "vw_3_3_kht67",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-29T15:02:21.902Z"
+    },
+    {
+      "id": "vw_3_4_73e27",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-29T23:21:15.997Z"
+    },
+    {
+      "id": "vw_3_5_x02kqw",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-29T23:01:30.542Z"
+    },
+    {
+      "id": "vw_3_6_a7y6m",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-30T04:08:08.923Z"
+    },
+    {
+      "id": "vw_3_7_mrjlm9",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-29T08:59:29.153Z"
+    },
+    {
+      "id": "vw_3_8_hlqwhm",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-29T15:07:40.025Z"
+    },
+    {
+      "id": "vw_3_9_o3wzyo",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-29T15:42:44.913Z"
+    },
+    {
+      "id": "vw_3_10_4thu3o",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-30T02:30:21.343Z"
+    },
+    {
+      "id": "vw_3_11_5xpz1n",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-29T18:17:35.422Z"
+    },
+    {
+      "id": "vw_3_12_bwq5q7",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-29T16:25:10.847Z"
+    },
+    {
+      "id": "vw_3_13_tox5a",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-29T21:51:18.602Z"
+    },
+    {
+      "id": "vw_3_14_he602rb",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-29T15:09:32.141Z"
+    },
+    {
+      "id": "vw_3_15_n8rvub",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-30T01:07:07.318Z"
+    },
+    {
+      "id": "vw_3_16_iflwj",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-30T02:47:05.018Z"
+    },
+    {
+      "id": "vw_3_17_88ffte",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-29T08:23:33.763Z"
+    },
+    {
+      "id": "vw_3_18_w940qq",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-29T07:26:53.894Z"
+    },
+    {
+      "id": "vw_3_19_sxdld79",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-29T13:33:36.921Z"
+    },
+    {
+      "id": "vw_2_0_4t8zo",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-30T10:51:47.541Z"
+    },
+    {
+      "id": "vw_2_1_a67cc",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-31T00:25:35.769Z"
+    },
+    {
+      "id": "vw_2_2_8f2jb",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-30T16:46:41.269Z"
+    },
+    {
+      "id": "vw_2_3_2s8sv5",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-30T12:13:44.559Z"
+    },
+    {
+      "id": "vw_2_4_fmmu6",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-30T20:52:22.048Z"
+    },
+    {
+      "id": "vw_2_5_ri6intw",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-30T14:49:48.347Z"
+    },
+    {
+      "id": "vw_2_6_qaypya",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-10-31T04:00:44.027Z"
+    },
+    {
+      "id": "vw_2_7_62ac39",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-31T00:41:13.523Z"
+    },
+    {
+      "id": "vw_2_8_mk3owg9",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-30T23:40:18.494Z"
+    },
+    {
+      "id": "vw_2_9_tz50rq",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-31T01:03:23.924Z"
+    },
+    {
+      "id": "vw_2_10_7nn1mo",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-30T16:27:30.109Z"
+    },
+    {
+      "id": "vw_2_11_7hetbk",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-30T10:19:40.487Z"
+    },
+    {
+      "id": "vw_2_12_fg2yc9",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-10-30T09:21:02.773Z"
+    },
+    {
+      "id": "vw_2_13_8529ym",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-31T01:32:27.768Z"
+    },
+    {
+      "id": "vw_2_14_mmiibk",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-30T16:21:59.585Z"
+    },
+    {
+      "id": "vw_1_0_wih2v",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T00:54:55.931Z"
+    },
+    {
+      "id": "vw_1_1_p3i3w",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-10-31T18:11:30.692Z"
+    },
+    {
+      "id": "vw_1_2_kplei",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-31T23:20:23.592Z"
+    },
+    {
+      "id": "vw_1_3_tvh6xj",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-31T23:58:49.972Z"
+    },
+    {
+      "id": "vw_1_4_om9yvs",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-10-31T08:41:06.653Z"
+    },
+    {
+      "id": "vw_1_5_azx0to",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-10-31T09:58:20.312Z"
+    },
+    {
+      "id": "vw_1_6_udey4",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T01:09:12.274Z"
+    },
+    {
+      "id": "vw_1_7_h8krnj",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-10-31T10:40:12.703Z"
+    },
+    {
+      "id": "vw_1_8_8a787c",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T03:43:54.186Z"
+    },
+    {
+      "id": "vw_1_9_ckjazw",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "whatsapp",
+      "created_at": "2026-10-31T07:53:00.095Z"
+    },
+    {
+      "id": "vw_1_10_r8woro",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T02:56:58.465Z"
+    },
+    {
+      "id": "vw_1_11_4i5j1e",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-11-01T02:53:58.071Z"
+    },
+    {
+      "id": "vw_0_0_dlyzqc",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T19:01:08.339Z"
+    },
+    {
+      "id": "vw_0_1_rjyb8",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-11-01T22:28:14.525Z"
+    },
+    {
+      "id": "vw_0_2_q3hya",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T22:06:13.522Z"
+    },
+    {
+      "id": "vw_0_3_p5op5i",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-11-02T04:24:35.239Z"
+    },
+    {
+      "id": "vw_0_4_getzuh",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T13:51:03.817Z"
+    },
+    {
+      "id": "vw_0_5_q6g7r3",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-11-01T12:15:59.896Z"
+    },
+    {
+      "id": "vw_0_6_fy0ffc",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T08:07:21.710Z"
+    },
+    {
+      "id": "vw_0_7_wwdt",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "direct",
+      "created_at": "2026-11-01T15:27:26.413Z"
+    },
+    {
+      "id": "vw_0_8_59poa",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T17:21:35.348Z"
+    },
+    {
+      "id": "vw_0_9_ckgrff",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "whatsapp",
+      "created_at": "2026-11-01T19:50:16.840Z"
+    },
+    {
+      "id": "vw_0_10_j57hz5",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T09:51:27.533Z"
+    },
+    {
+      "id": "vw_0_11_5zirw8",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-11-01T20:06:53.796Z"
+    },
+    {
+      "id": "vw_0_12_gjli4i",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T19:37:53.156Z"
+    },
+    {
+      "id": "vw_0_13_s394y8",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-11-01T17:35:26.465Z"
+    },
+    {
+      "id": "vw_0_14_ionb2l",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T12:34:12.061Z"
+    },
+    {
+      "id": "vw_0_15_d61owk",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-11-02T00:19:43.437Z"
+    },
+    {
+      "id": "vw_0_16_fpshui",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-11-02T03:14:35.940Z"
+    },
+    {
+      "id": "vw_0_17_wxc21",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-11-01T10:51:58.862Z"
+    },
+    {
+      "id": "vw_0_18_d7u7c",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T14:07:53.426Z"
+    },
+    {
+      "id": "vw_0_19_vey7o",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "direct",
+      "created_at": "2026-11-01T19:36:28.983Z"
+    },
+    {
+      "id": "vw_0_20_8m0g3",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "referrer": "instagram",
+      "created_at": "2026-11-02T03:14:22.297Z"
+    },
+    {
+      "id": "vw_0_21_nf05f",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "whatsapp",
+      "created_at": "2026-11-02T03:47:45.752Z"
+    },
+    {
+      "id": "vw_0_22_k71j6",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T14:02:12.186Z"
+    },
+    {
+      "id": "vw_0_23_2knl6d",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "referrer": "direct",
+      "created_at": "2026-11-02T04:07:47.223Z"
+    },
+    {
+      "id": "vw_0_24_9e5a3",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "referrer": "instagram",
+      "created_at": "2026-11-01T14:51:22.119Z"
+    }
+  ],
+  "whatsapp_clicks": [
+    {
+      "id": "clk_14_0_dfndgl",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-19T02:45:58.588Z"
+    },
+    {
+      "id": "clk_14_1_vxydh",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-18T20:45:29.216Z"
+    },
+    {
+      "id": "clk_14_2_awrqgp",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-18T10:42:55.637Z"
+    },
+    {
+      "id": "clk_14_3_3y8kwa",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-18T23:54:05.419Z"
+    },
+    {
+      "id": "clk_14_4_l7cgqd",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-18T14:15:45.847Z"
+    },
+    {
+      "id": "clk_14_5_vfnl2",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-19T01:01:17.090Z"
+    },
+    {
+      "id": "clk_13_0_yggjus",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-19T18:29:43.336Z"
+    },
+    {
+      "id": "clk_13_1_wxzej",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-19T14:28:16.973Z"
+    },
+    {
+      "id": "clk_12_0_lr85uo",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-20T22:27:33.044Z"
+    },
+    {
+      "id": "clk_12_1_9nmc3h",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-20T08:39:03.925Z"
+    },
+    {
+      "id": "clk_11_0_l3ggrn",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-21T11:34:26.937Z"
+    },
+    {
+      "id": "clk_11_1_yqqjr",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-21T21:26:04.089Z"
+    },
+    {
+      "id": "clk_11_2_k1bv18",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-21T21:58:07.876Z"
+    },
+    {
+      "id": "clk_11_3_x7zcma",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-21T11:56:40.903Z"
+    },
+    {
+      "id": "clk_10_0_ka9y4",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-22T23:00:39.015Z"
+    },
+    {
+      "id": "clk_10_1_vgww2n",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-22T09:19:26.235Z"
+    },
+    {
+      "id": "clk_10_2_xwijn",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-22T17:16:07.252Z"
+    },
+    {
+      "id": "clk_9_0_dtg3rc",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-23T21:25:34.875Z"
+    },
+    {
+      "id": "clk_9_1_bdbj1b",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-23T10:49:52.647Z"
+    },
+    {
+      "id": "clk_9_2_umw6sn",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-24T01:18:32.198Z"
+    },
+    {
+      "id": "clk_9_3_bpybls",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-23T10:20:19.518Z"
+    },
+    {
+      "id": "clk_9_4_yqoh2n",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-23T19:37:12.255Z"
+    },
+    {
+      "id": "clk_8_0_wc8z3",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-24T15:19:28.966Z"
+    },
+    {
+      "id": "clk_8_1_6b6ti",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-24T23:51:25.355Z"
+    },
+    {
+      "id": "clk_8_2_ecxgl8",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-24T14:43:44.102Z"
+    },
+    {
+      "id": "clk_8_3_d09yab",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-24T16:41:21.195Z"
+    },
+    {
+      "id": "clk_7_0_vgciep",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-25T16:22:04.405Z"
+    },
+    {
+      "id": "clk_7_1_12f8nu",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-25T15:11:01.554Z"
+    },
+    {
+      "id": "clk_7_2_genpza",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-25T14:56:57.878Z"
+    },
+    {
+      "id": "clk_6_0_6aivg9",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-26T20:47:55.722Z"
+    },
+    {
+      "id": "clk_6_1_6ecuhs",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-26T06:35:22.443Z"
+    },
+    {
+      "id": "clk_6_2_a4ag1",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-26T23:00:30.391Z"
+    },
+    {
+      "id": "clk_6_3_kcayi5",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-27T03:47:34.241Z"
+    },
+    {
+      "id": "clk_6_4_r9glck",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-26T10:09:52.234Z"
+    },
+    {
+      "id": "clk_5_0_mjtb9b",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-27T22:47:44.413Z"
+    },
+    {
+      "id": "clk_5_1_4pvbv",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-27T14:09:51.889Z"
+    },
+    {
+      "id": "clk_5_2_7zhf1b",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-27T14:29:48.778Z"
+    },
+    {
+      "id": "clk_5_3_kri8bp",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-27T10:27:02.510Z"
+    },
+    {
+      "id": "clk_5_4_ewzv78",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-27T21:06:34.905Z"
+    },
+    {
+      "id": "clk_5_5_nea59",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-27T23:53:55.726Z"
+    },
+    {
+      "id": "clk_4_0_mjmc2l",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-28T10:53:17.604Z"
+    },
+    {
+      "id": "clk_4_1_gg474cj",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-28T15:28:46.691Z"
+    },
+    {
+      "id": "clk_4_2_hzs2xw",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-28T14:06:39.690Z"
+    },
+    {
+      "id": "clk_4_3_p4k2lg",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-28T13:34:24.952Z"
+    },
+    {
+      "id": "clk_3_0_4jjmu",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-29T12:36:27.472Z"
+    },
+    {
+      "id": "clk_3_1_9ysdt3",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-30T02:59:05.373Z"
+    },
+    {
+      "id": "clk_3_2_6h45j5",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-30T03:51:16.235Z"
+    },
+    {
+      "id": "clk_2_0_hn6grn",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-30T20:44:26.301Z"
+    },
+    {
+      "id": "clk_2_1_en9w2",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-30T16:57:04.170Z"
+    },
+    {
+      "id": "clk_1_0_fix0hi",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-10-31T12:43:52.638Z"
+    },
+    {
+      "id": "clk_1_1_qij8j",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-10-31T13:09:41.588Z"
+    },
+    {
+      "id": "clk_1_2_dqa3hi",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-31T20:08:45.215Z"
+    },
+    {
+      "id": "clk_1_3_vm7u3a",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-10-31T08:26:09.232Z"
+    },
+    {
+      "id": "clk_1_4_nflelm",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-11-01T00:17:42.231Z"
+    },
+    {
+      "id": "clk_0_0_91mfz",
+      "catalog_id": "cat_pizza_01",
+      "business_id": "biz_pizza_01",
+      "product_id": "prod_pz_01",
+      "product_name": "Margherita Verace D.O.P.",
+      "message_snippet": "Olá! Gostaria de pedir: Margherita Verace D.O.P.",
+      "created_at": "2026-11-01T19:29:59.438Z"
+    },
+    {
+      "id": "clk_0_1_rpiiea",
+      "catalog_id": "cat_barber_03",
+      "business_id": "biz_barber_03",
+      "product_id": "prod_brb_01",
+      "product_name": "Corte Tradicional + Lavagem",
+      "message_snippet": "Olá! Gostaria de pedir: Corte Tradicional + Lavagem",
+      "created_at": "2026-11-02T01:31:53.465Z"
+    },
+    {
+      "id": "clk_0_2_xo7fcj",
+      "catalog_id": "cat_fashion_02",
+      "business_id": "biz_fashion_02",
+      "product_id": "prod_fsh_01",
+      "product_name": "Camisa Oversized em Linho Puro",
+      "message_snippet": "Olá! Gostaria de pedir: Camisa Oversized em Linho Puro",
+      "created_at": "2026-11-02T02:39:35.817Z"
+    }
+  ]
+}
