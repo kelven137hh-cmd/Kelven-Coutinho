@@ -17,6 +17,7 @@ import { SettingsView } from './components/dashboard/SettingsView';
 import { HelpView } from './components/dashboard/HelpView';
 import { AdminView } from './components/dashboard/AdminView';
 import { PublicCatalog } from './components/public/PublicCatalog';
+import { AuthPage } from './components/AuthPage';
 import { Business, Catalog, Product, AnalyticsData, CatalogTemplate } from './types';
 import { api } from './lib/api';
 
@@ -57,9 +58,53 @@ function AppContent() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Check if current route is a public catalog
-  const publicSlugMatch = currentPath.match(/^\/(?:loja|catalog)\/([a-zA-Z0-9_-]+)/);
-  const publicCatalogSlug = publicSlugMatch ? publicSlugMatch[1] : null;
+  // Check if current route is a public catalog (supporting full Unicode/accents, encoded characters, trailing slashes)
+  const publicSlugMatch = currentPath.match(/^\/(?:loja|catalog)\/([^/?#]+)/i);
+  const publicCatalogSlug = publicSlugMatch ? decodeURIComponent(publicSlugMatch[1].trim()) : null;
+
+  // Route helpers for auth and dashboard protection
+  const getAuthMode = (path: string): 'login' | 'register' | 'recover' | null => {
+    const p = path.toLowerCase().replace(/\/$/, '');
+    if (p === '/login' || p === '/entrar') return 'login';
+    if (p === '/register' || p === '/cadastro' || p === '/criar-conta') return 'register';
+    if (p === '/recuperar-senha' || p === '/recover') return 'recover';
+    return null;
+  };
+
+  const isDashboardRoute = (path: string): boolean => {
+    const p = path.toLowerCase().replace(/\/$/, '');
+    return [
+      '/dashboard',
+      '/painel',
+      '/negocios',
+      '/catalogos',
+      '/produtos',
+      '/categorias',
+      '/modelos',
+      '/estatisticas',
+      '/planos',
+      '/configuracoes',
+      '/ajuda',
+      '/admin',
+      '/builder',
+    ].some((r) => p === r || p.startsWith(`${r}/`));
+  };
+
+  // Sync activeTab with URL for authenticated users
+  useEffect(() => {
+    const p = currentPath.toLowerCase().replace(/\/$/, '');
+    if (p === '/negocios') setActiveTab('businesses');
+    else if (p === '/catalogos') setActiveTab('catalogs');
+    else if (p === '/produtos') setActiveTab('products');
+    else if (p === '/categorias') setActiveTab('categories');
+    else if (p === '/modelos') setActiveTab('templates');
+    else if (p === '/estatisticas') setActiveTab('analytics');
+    else if (p === '/planos') setActiveTab('plans');
+    else if (p === '/configuracoes') setActiveTab('settings');
+    else if (p === '/ajuda') setActiveTab('help');
+    else if (p === '/admin') setActiveTab('admin');
+    else if (p === '/dashboard' || p === '/painel') setActiveTab('overview');
+  }, [currentPath]);
 
   // Load dashboard data when user is authenticated
   const loadDashboardData = useCallback(async () => {
@@ -97,7 +142,7 @@ function AppContent() {
     }
   }, [user, loadDashboardData]);
 
-  // Public Catalog Route (No Auth Required)
+  // 1. Public Catalog Route (100% No Auth Required)
   if (publicCatalogSlug) {
     return (
       <PublicCatalog
@@ -107,7 +152,7 @@ function AppContent() {
     );
   }
 
-  // Loading Session
+  // 2. Loading Session Check
   if (authLoading) {
     return (
       <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4">
@@ -117,14 +162,62 @@ function AppContent() {
     );
   }
 
-  // Logged-in: Render SaaS Dashboard
+  // 3. Unauthenticated Routes (Login, Register, or Protected Dashboard Interception)
+  if (!user) {
+    const authMode = getAuthMode(currentPath);
+
+    // Explicit login, register, recover page
+    if (authMode) {
+      return (
+        <AuthPage
+          initialMode={authMode}
+          onSuccess={() => navigateTo('/dashboard')}
+          onGoHome={() => navigateTo('/')}
+        />
+      );
+    }
+
+    // Attempted to access protected dashboard route without logging in
+    if (isDashboardRoute(currentPath)) {
+      return (
+        <AuthPage
+          initialMode="login"
+          redirectMessage="Por favor inicie sessão para aceder ao painel de gestão da Catafy."
+          onSuccess={() => navigateTo('/dashboard')}
+          onGoHome={() => navigateTo('/')}
+        />
+      );
+    }
+  }
+
+  // 4. Authenticated: Render SaaS Dashboard
   if (user) {
+    // If user is logged in but visiting auth URLs (/login, /register), redirect to dashboard
+    if (getAuthMode(currentPath)) {
+      navigateTo('/dashboard');
+    }
+
     return (
       <DashboardLayout
         activeTab={activeTab}
         onSelectTab={(tab) => {
           if (tab !== 'builder') setBuilderCatalog(null);
           setActiveTab(tab);
+          const routeMap: Record<DashboardTab, string> = {
+            overview: '/dashboard',
+            businesses: '/negocios',
+            catalogs: '/catalogos',
+            builder: '/builder',
+            products: '/produtos',
+            categories: '/categorias',
+            templates: '/modelos',
+            analytics: '/estatisticas',
+            plans: '/planos',
+            settings: '/configuracoes',
+            help: '/ajuda',
+            admin: '/admin',
+          };
+          window.history.pushState({}, '', routeMap[tab] || '/dashboard');
         }}
         onNewCatalog={() => {
           setBuilderCatalog(null);

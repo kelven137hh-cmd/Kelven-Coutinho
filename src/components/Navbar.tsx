@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <>
               <button
                 onClick={() => onOpenAuth('login')}
-                className="hidden sm:inline-block text-xs font-semibold text-[#17152B] hover:text-[#6D28D9] transition-colors px-2 py-1.5 whitespace-nowrap shrink-0 cursor-pointer"
+                className="text-xs font-semibold text-[#17152B] hover:text-[#6D28D9] transition-colors px-2 py-1.5 whitespace-nowrap shrink-0 cursor-pointer"
               >
                 Iniciar Sessão
               </button>

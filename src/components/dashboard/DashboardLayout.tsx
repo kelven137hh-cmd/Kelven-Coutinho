@@ -219,7 +219,11 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
             </div>
 
             <button
-              onClick={logout}
+              onClick={() => {
+                logout();
+                window.history.pushState({}, '', '/login');
+                window.dispatchEvent(new PopStateEvent('popstate'));
+              }}
               className="w-full flex items-center justify-center gap-2 py-2 px-3 text-xs font-semibold text-[#77758A] hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-colors cursor-pointer"
             >
               <LogOut className="w-4 h-4" />

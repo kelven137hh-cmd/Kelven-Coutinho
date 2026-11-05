@@ -16,7 +16,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   onClose,
   onSuccess,
 }) => {
-  const { login, register, quickLoginDemo } = useAuth();
+  const { login, register } = useAuth();
   const [tab, setTab] = useState<'login' | 'register' | 'recover'>(initialTab);
 
   const [name, setName] = useState('');
@@ -26,8 +26,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [recoverSuccess, setRecoverSuccess] = useState<string | null>(null);
-
-  if (!isOpen) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -100,18 +98,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     }
   };
 
-  const handleDemoAccess = async (type: 'merchant' | 'admin') => {
-    setLoading(true);
-    setError(null);
-    try {
-      await quickLoginDemo(type);
-      onSuccess();
-    } catch (err: any) {
-      setError(err.message || 'Erro ao entrar na conta demo.');
-    } finally {
-      setLoading(false);
-    }
-  };
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
@@ -320,31 +307,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               ← Voltar ao Ecrã de Login
             </button>
           )}
-
-          {/* Quick Demo Access Bar */}
-          <div className="pt-4 border-t border-slate-100 space-y-2">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#77758A] block text-center">
-              Acesso Rápido de Teste (1 Clique)
-            </span>
-            <div className="grid grid-cols-2 gap-2.5">
-              <button
-                type="button"
-                onClick={() => handleDemoAccess('merchant')}
-                className="p-2.5 rounded-xl bg-purple-50 hover:bg-purple-100/70 border border-purple-200 text-left transition-colors cursor-pointer"
-              >
-                <span className="font-bold text-xs text-[#6D28D9] block">Conta Empresário</span>
-                <span className="text-[10px] text-[#77758A] block truncate">demo@catafy.com</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleDemoAccess('admin')}
-                className="p-2.5 rounded-xl bg-amber-50/70 hover:bg-amber-100/70 border border-amber-200 text-left transition-colors cursor-pointer"
-              >
-                <span className="font-bold text-xs text-amber-900 block">Super Admin</span>
-                <span className="text-[10px] text-amber-700 block truncate">admin@catafy.com</span>
-              </button>
-            </div>
-          </div>
         </form>
       </div>
     </div>

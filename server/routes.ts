@@ -1,9 +1,12 @@
-import express, { Response } from 'express';
+import express from 'express';
+import type { Response } from 'express';
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { db, hashPassword, verifyPassword, User, Business, Catalog, Category, Product } from './db.js';
-import { generateToken, requireAuth, requireAdmin, AuthenticatedRequest } from './auth.js';
+import { db, hashPassword, verifyPassword } from './db.ts';
+import type { User, Business, Catalog, Category, Product } from './db.ts';
+import { generateToken, requireAuth, requireAdmin } from './auth.ts';
+import type { AuthenticatedRequest } from './auth.ts';
 
 export const apiRouter = express.Router();
 
@@ -596,32 +599,143 @@ apiRouter.delete('/products/:id', requireAuth, (req: AuthenticatedRequest, res: 
 // 6. PUBLIC CATALOG & STORE ACCESS
 // ==========================================
 
-apiRouter.get(['/public/catalogs/:slug', '/public/catalog/:slug'], (req, res) => {
-  const { slug } = req.params;
-  const catalog = db.get('catalogs').find((c) => c.slug === slug);
+// Helper to look up catalog with full resilience:
+// exact slug, case-insensitive slug, slugified match, ID match, or title match
+function findCatalogBySlugOrId(param: string | undefined): Catalog | undefined {
+  if (!param) return undefined;
+
+  const raw = String(param).trim();
+  let decoded = raw;
+  try {
+    decoded = decodeURIComponent(raw).trim();
+  } catch {
+    decoded = raw;
+  }
+
+  const lower = decoded.toLowerCase();
+  const slugified = slugify(decoded);
+  const catalogs = db.get('catalogs');
+
+  // 1. Exact match on slug
+  let found = catalogs.find((c) => c.slug === decoded || c.slug === raw);
+  if (found) return found;
+
+  // 2. Case-insensitive match on slug
+  found = catalogs.find((c) => c.slug?.toLowerCase() === lower);
+  if (found) return found;
+
+  // 3. Slugified match
+  if (slugified) {
+    found = catalogs.find((c) => c.slug === slugified || c.slug?.toLowerCase() === slugified);
+    if (found) return found;
+  }
+
+  // 4. Exact match on catalog ID (e.g. cat_c343ae1c or cat_pizza_01)
+  found = catalogs.find((c) => c.id === raw || c.id === decoded || c.id?.toLowerCase() === lower);
+  if (found) return found;
+
+  // 5. Match if param is ID without 'cat_' prefix
+  found = catalogs.find((c) => c.id === `cat_${lower}` || c.id === `cat_${raw}`);
+  if (found) return found;
+
+  // 6. Match by exact or lowercase title
+  found = catalogs.find((c) => c.title?.trim().toLowerCase() === lower);
+  if (found) return found;
+
+  // 7. Partial slug match fallback
+  found = catalogs.find((c) => {
+    const cSlug = c.slug?.toLowerCase();
+    return cSlug && (cSlug.startsWith(lower) || lower.startsWith(cSlug));
+  });
+  if (found) return found;
+
+  return undefined;
+}
+
+apiRouter.get([
+  '/public/catalogs/:slug',
+  '/public/catalog/:slug',
+  '/catalogs/public/:slug',
+  '/catalogs/:slug/public',
+  '/loja/:slug',
+  '/catalog/:slug',
+], (req, res) => {
+  const rawParam = (req.params.slug || req.query.slug || req.query.id || '') as string;
+  const catalog = findCatalogBySlugOrId(rawParam);
 
   if (!catalog) {
     return res.status(404).json({ error: 'Catálogo não encontrado ou link expirado.' });
   }
 
-  const business = db.get('businesses').find((b) => b.id === catalog.business_id);
+  // Find associated business with fallback
+  let business = db.get('businesses').find((b) => b.id === catalog.business_id);
   if (!business) {
-    return res.status(404).json({ error: 'Empresa associada não encontrada.' });
+    business = db.get('businesses').find((b) => b.user_id === catalog.user_id);
+  }
+  if (!business) {
+    business = {
+      id: catalog.business_id || 'biz_default',
+      user_id: catalog.user_id,
+      name: catalog.title,
+      category: 'other',
+      description: catalog.description || '',
+      logo_url: catalog.logo_url || '',
+      cover_url: catalog.cover_url || '',
+      phone: '',
+      whatsapp: '',
+      address: '',
+      instagram: '',
+      facebook: '',
+      website: '',
+      created_at: catalog.created_at,
+    };
   }
 
   // Check if owner is suspended
   const owner = db.get('users').find((u) => u.id === catalog.user_id);
   if (owner?.is_suspended) {
-    return res.status(403).json({ error: 'Este catálogo está temporariamente indisponível.' });
+    return res.status(403).json({ error: 'Este catálogo está temporariamente indisponível pelo proprietário.' });
   }
 
-  const categories = db.get('categories')
+  let categories = db.get('categories')
     .filter((cat) => cat.business_id === catalog.business_id)
     .sort((a, b) => a.sort_order - b.sort_order);
 
-  const products = db.get('products')
-    .filter((prod) => prod.business_id === catalog.business_id && prod.is_available)
+  let products = db.get('products')
+    .filter((prod) => prod.business_id === catalog.business_id && prod.is_available !== false)
     .sort((a, b) => a.sort_order - b.sort_order);
+
+  // If there are products but no categories, synthesize a default category so templates render them
+  if (products.length > 0) {
+    if (categories.length === 0) {
+      const defaultCategory: Category = {
+        id: 'cat_geral',
+        business_id: catalog.business_id,
+        name: 'Cardápio / Produtos',
+        sort_order: 1,
+      };
+      categories = [defaultCategory];
+      products = products.map((p) => (p.category_id ? p : { ...p, category_id: defaultCategory.id }));
+    } else {
+      // If some products have missing or unassigned categories, group into a fallback category
+      const existingCategoryIds = new Set(categories.map((c) => c.id));
+      const hasUnassigned = products.some((p) => !p.category_id || !existingCategoryIds.has(p.category_id));
+      if (hasUnassigned) {
+        const othersCategory: Category = {
+          id: 'cat_outros',
+          business_id: catalog.business_id,
+          name: 'Outros Itens',
+          sort_order: 999,
+        };
+        categories = [...categories, othersCategory];
+        products = products.map((p) =>
+          !p.category_id || !existingCategoryIds.has(p.category_id)
+            ? { ...p, category_id: othersCategory.id }
+            : p
+        );
+      }
+    }
+  }
 
   return res.json({
     catalog,

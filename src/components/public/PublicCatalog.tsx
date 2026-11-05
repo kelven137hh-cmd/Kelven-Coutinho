@@ -209,6 +209,13 @@ export const PublicCatalog: React.FC<PublicCatalogProps> = ({ slug, onGoHome }) 
         fontFamily: typo.bodyFamily,
       }}
     >
+      {/* Draft Mode Notice (if inactive) */}
+      {!catalog.is_active && (
+        <div className="bg-amber-500 text-white text-xs py-2 px-4 text-center font-medium shadow-xs">
+          ⚠️ Este catálogo está atualmente em modo de <strong>Rascunho</strong>. Para receber pedidos públicos oficiais, ative-o no painel Catafy.
+        </div>
+      )}
+
       {/* Cover Banner */}
       <div className="relative w-full h-44 sm:h-64 bg-slate-900 overflow-hidden">
         {catalog.cover_url ? (

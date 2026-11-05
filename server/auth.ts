@@ -1,6 +1,7 @@
 import crypto from 'node:crypto';
-import { Request, Response, NextFunction } from 'express';
-import { db, User } from './db.js';
+import type { Request, Response, NextFunction } from 'express';
+import { db } from './db.ts';
+import type { User } from './db.ts';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'catafy_super_secret_signing_key_2026';
 

@@ -39,6 +39,66 @@
       "plan_id": "free",
       "is_suspended": false,
       "created_at": "2026-11-01T06:54:22.730Z"
+    },
+    {
+      "id": "usr_cdbac209",
+      "name": "Test User",
+      "email": "test_404@example.com",
+      "password_hash": "c0afb3b08dfca3f652be4ca2b9be633c:b7a5f38a1713af79e561c51672a2761be26beabb3888c83a0156fe7f0afa8796b0b7fac0d53b994652e240b01e142c9dc4cbb27893ea8fb3e7f1208bee6dbf33",
+      "role": "user",
+      "plan_id": "free",
+      "is_suspended": false,
+      "created_at": "2026-11-01T13:25:17.111Z"
+    },
+    {
+      "id": "usr_f65b83e8",
+      "name": "Prod Test User",
+      "email": "prod_test@example.com",
+      "password_hash": "0918fbe1890f4bc74f5c8f9265c86f51:f98e04cf10e414023a4a1eabd294cbbc9f15570a804a9f0167c0781eed3ad3b12ab0c3549d3e455720d80ed0bf234849a696267360ddf06e01ca5b27f31cae16",
+      "role": "user",
+      "plan_id": "free",
+      "is_suspended": false,
+      "created_at": "2026-11-01T13:32:01.112Z"
+    },
+    {
+      "id": "usr_8a9e761e",
+      "name": "Mariana Sousa",
+      "email": "mariana.sousa@example.com",
+      "password_hash": "86c75ad1e3914665d1db17e7487ef3ea:b0fa9c4fe3ba3370e18aa081492780e8d03c159189df6cd847e8da2a4f3e5d6ffd4ffa87654896200bba071054a51e3c62756fa3f8fd4f6d280df8bfcd04de75",
+      "role": "user",
+      "plan_id": "free",
+      "is_suspended": false,
+      "created_at": "2026-11-01T13:34:18.392Z"
+    },
+    {
+      "id": "usr_9f76e349",
+      "name": "Carlos Mendes",
+      "email": "carlos.mendes@empresa.pt",
+      "password_hash": "72395c2a34c6fb84cd55960aec2289fc:b81ca1a123d32cf514705c0bb0e0126c24dde0295e61edf552be7ee02c5813ceb0a88db1f06cebb63bb2872fc63e15fa2776742f2f1d7bdd8f8eb70dcebc89e5",
+      "role": "user",
+      "plan_id": "free",
+      "is_suspended": false,
+      "created_at": "2026-11-01T13:35:20.440Z"
+    },
+    {
+      "id": "usr_e5d9499a",
+      "name": "Carlos Catafy",
+      "email": "test_flow_1793697788352@catafy.test",
+      "password_hash": "8b6d3b23249d23d830a4c7d317e90b70:4484dc7041db544c547ff46a6c0bf5539a0402e6a687e3dd5467098b7f45c50081ae643408a87ee5a7588924c7dc53c59b63a74a0e5be8094d6040d918af5ec7",
+      "role": "user",
+      "plan_id": "free",
+      "is_suspended": false,
+      "created_at": "2026-11-03T09:23:08.529Z"
+    },
+    {
+      "id": "usr_f6df7d80",
+      "name": "Manuel Silva",
+      "email": "user_teste_1793877243356@catafy.io",
+      "password_hash": "414c0c683468f8cb576a009ae22d8834:d79c792a2546155e2e99bf5d630db727ba10f1dd4a8c2d52b99f79ce6d78bcd0c8c5765d638ecb403e60fb3f6763d5b4b32198937c6047b0f45667b7ba1f113b",
+      "role": "user",
+      "plan_id": "free",
+      "is_suspended": false,
+      "created_at": "2026-11-05T11:14:03.400Z"
     }
   ],
   "businesses": [
@@ -84,6 +144,22 @@
       "address": "Praça do Comércio 24, Porto",
       "instagram": "@gentlemans.barber",
       "created_at": "2026-10-22T06:22:29.231Z"
+    },
+    {
+      "id": "biz_d1143798",
+      "user_id": "usr_e5d9499a",
+      "name": "Pastelaria & Café Estrela D Ouro",
+      "category": "bakery",
+      "description": "Pastéis de nata quentes saídos do forno e cafés especiais.",
+      "logo_url": "",
+      "cover_url": "",
+      "phone": "+351 922 111 222",
+      "whatsapp": "+351922111222",
+      "address": "Avenida da Liberdade 88, Lisboa",
+      "instagram": "",
+      "facebook": "",
+      "website": "",
+      "created_at": "2026-11-03T09:23:08.549Z"
     }
   ],
   "catalogs": [
@@ -146,6 +222,48 @@
       "is_active": true,
       "created_at": "2026-10-22T06:22:29.232Z",
       "updated_at": "2026-11-01T06:22:29.232Z"
+    },
+    {
+      "id": "cat_c343ae1c",
+      "business_id": "biz_pizza_01",
+      "user_id": "usr_demo_01",
+      "title": "kskwkjwnm",
+      "slug": "kskwkjwnm",
+      "description": "",
+      "template": "modern",
+      "typography": "moderna",
+      "primary_color": "#6D28D9",
+      "secondary_color": "#9333EA",
+      "font_family": "Plus Jakarta Sans",
+      "cover_url": "/src/assets/images/food_artisan_pizza_1793488874759.jpg",
+      "logo_url": "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=200&auto=format&fit=crop&q=80",
+      "welcome_message": "Bem-vindo ao nosso catálogo! Faça seu pedido ou tire dúvidas pelo WhatsApp.",
+      "currency": "€",
+      "allow_orders": true,
+      "is_active": true,
+      "created_at": "2026-11-01T18:23:56.484Z",
+      "updated_at": "2026-11-01T18:23:56.484Z"
+    },
+    {
+      "id": "cat_7ad401bf",
+      "business_id": "biz_d1143798",
+      "user_id": "usr_e5d9499a",
+      "title": "Menu Café & Pastelaria Estrela",
+      "slug": "estrela-douro-8570",
+      "description": "Consulte nosso menu completo e peça direto no WhatsApp!",
+      "template": "modern",
+      "typography": "moderna",
+      "primary_color": "#6D28D9",
+      "secondary_color": "#9333EA",
+      "font_family": "Plus Jakarta Sans",
+      "cover_url": "",
+      "logo_url": "",
+      "welcome_message": "Bem-vindo ao nosso catálogo! Faça seu pedido ou tire dúvidas pelo WhatsApp.",
+      "currency": "€",
+      "allow_orders": true,
+      "is_active": true,
+      "created_at": "2026-11-03T09:23:08.575Z",
+      "updated_at": "2026-11-03T09:23:08.575Z"
     }
   ],
   "categories": [
@@ -190,6 +308,24 @@
       "business_id": "biz_barber_03",
       "name": "Tratamentos & Cuidados",
       "sort_order": 2
+    },
+    {
+      "id": "catg_ac8d7753",
+      "business_id": "biz_d1143798",
+      "name": "Pães & Broas",
+      "sort_order": 1
+    },
+    {
+      "id": "catg_b2c2c023",
+      "business_id": "biz_d1143798",
+      "name": "Pastelaria",
+      "sort_order": 2
+    },
+    {
+      "id": "catg_324d4379",
+      "business_id": "biz_d1143798",
+      "name": "Cafetaria",
+      "sort_order": 3
     }
   ],
   "products": [
@@ -365,6 +501,34 @@
         "service_duration": "35 minutos"
       },
       "created_at": "2026-10-23T06:22:29.232Z"
+    },
+    {
+      "id": "prod_389a9ff6",
+      "business_id": "biz_d1143798",
+      "category_id": "",
+      "name": "Pastel de Nata Artesanal (Unidade)",
+      "description": "Massa folhada estaladiça com creme aveludado e canela a gosto.",
+      "price": 1.5,
+      "promo_price": 1.2,
+      "image_url": "/src/assets/images/food_artisan_pizza_1793488874759.jpg",
+      "is_available": true,
+      "sort_order": 1,
+      "segment_data": {},
+      "created_at": "2026-11-03T09:23:08.557Z"
+    },
+    {
+      "id": "prod_2191b6ce",
+      "business_id": "biz_d1143798",
+      "category_id": "",
+      "name": "Cappuccino Italiano Especial",
+      "description": "Café espresso duplo, leite vaporizado cremoso e raspas de chocolate belga.",
+      "price": 3.2,
+      "promo_price": null,
+      "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&auto=format&fit=crop&q=80",
+      "is_available": true,
+      "sort_order": 2,
+      "segment_data": {},
+      "created_at": "2026-11-03T09:23:08.565Z"
     }
   ],
   "catalog_views": [

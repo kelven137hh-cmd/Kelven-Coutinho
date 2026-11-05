@@ -139,7 +139,11 @@ class Database {
 
   private load(): DatabaseSchema {
     if (!fs.existsSync(DB_DIR)) {
-      fs.mkdirSync(DB_DIR, { recursive: true });
+      try {
+        fs.mkdirSync(DB_DIR, { recursive: true });
+      } catch {
+        // Safe fallback in read-only environments
+      }
     }
 
     if (fs.existsSync(DB_FILE)) {

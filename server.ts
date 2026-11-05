@@ -4,7 +4,7 @@ import path from 'path';
 import fs from 'node:fs';
 import { fileURLToPath } from 'url';
 import { createServer as createViteServer } from 'vite';
-import { apiRouter } from './server/routes.js';
+import { apiRouter } from './server/routes.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -27,8 +27,19 @@ async function startServer() {
   app.use('/uploads', express.static(uploadsDir));
   app.use(express.static(publicDir));
 
+  // Serve local asset images both in development and production
+  const srcAssetsDir = path.resolve(__dirname, 'src', 'assets');
+  if (fs.existsSync(srcAssetsDir)) {
+    app.use('/src/assets', express.static(srcAssetsDir));
+  }
+
   // Mount API router
   app.use('/api', apiRouter);
+
+  // Fallback 404 JSON response for any unhandled /api requests
+  app.all('/api/*', (_req, res) => {
+    res.status(404).json({ error: 'Endpoint da API não encontrado (404).' });
+  });
 
   if (!isProduction) {
     const vite = await createViteServer({
@@ -38,11 +49,24 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.resolve(__dirname, 'dist');
-    app.use(express.static(distPath));
+    if (fs.existsSync(distPath)) {
+      app.use(express.static(distPath));
+    }
     app.get('*', (_req, res) => {
-      res.sendFile(path.resolve(distPath, 'index.html'));
+      const indexPath = path.resolve(distPath, 'index.html');
+      if (fs.existsSync(indexPath)) {
+        res.sendFile(indexPath);
+      } else {
+        res.sendFile(path.resolve(__dirname, 'index.html'));
+      }
     });
   }
+
+  // Global Express error handler
+  app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+    console.error('Unhandled server error:', err);
+    res.status(500).json({ error: err?.message || 'Erro interno no servidor.' });
+  });
 
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`Catafy running on port ${PORT}`);

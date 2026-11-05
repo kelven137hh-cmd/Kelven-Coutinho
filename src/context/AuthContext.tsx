@@ -9,7 +9,6 @@ interface AuthContextType {
   register: (name: string, email: string, password: string, confirmPassword?: string) => Promise<void>;
   logout: () => void;
   refreshUser: () => Promise<void>;
-  quickLoginDemo: (type: 'merchant' | 'admin') => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -57,22 +56,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setUser(null);
   };
 
-  const quickLoginDemo = async (type: 'merchant' | 'admin') => {
-    if (type === 'admin') {
-      try {
-        await login('admin@catafy.com', 'admin123');
-      } catch {
-        await login('admin@catalogohub.com', 'admin123');
-      }
-    } else {
-      try {
-        await login('demo@catafy.com', 'demo123');
-      } catch {
-        await login('demo@catalogohub.com', 'demo123');
-      }
-    }
-  };
-
   return (
     <AuthContext.Provider
       value={{
@@ -82,7 +65,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         register,
         logout,
         refreshUser,
-        quickLoginDemo,
       }}
     >
       {children}
